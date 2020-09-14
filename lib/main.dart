@@ -12,6 +12,36 @@ class HomePage extends StatelessWidget {
 }
 
 class MiCardScreen extends StatelessWidget {
+  Widget _buildInformationContainers(String text, Icon icon) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          width: double.infinity,
+          height: 40,
+          color: Colors.white,
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: icon,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Text(
+                  text, //
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,52 +76,14 @@ class MiCardScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
-                height: 10,
+              _buildInformationContainers(
+                '+923124400184',
+                Icon(Icons.phone),
               ),
-              Container(
-                width: double.infinity,
-                height: 40,
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Icon(Icons.phone),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Text(
-                        '+923124400184',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ],
-                ),
+              _buildInformationContainers(
+                'junaidhassan2211@gmail.com',
+                Icon(Icons.email),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                width: double.infinity,
-                height: 40,
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Icon(Icons.email),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Text(
-                        'junaidhassan2211@gmail.com',  //
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
         ),
