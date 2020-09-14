@@ -64,7 +64,8 @@ class MiCardScreen extends StatelessWidget {
               Text(
                 'Junaid Hassan',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontFamily: 'Pacifico',
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -72,7 +73,13 @@ class MiCardScreen extends StatelessWidget {
               Text(
                 'Flutter Developer',
                 style: TextStyle(
+                  letterSpacing: 2.5,
                   fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              Container(margin: EdgeInsets.symmetric(horizontal: 50),
+                child: Divider(
                   color: Colors.white,
                 ),
               ),
