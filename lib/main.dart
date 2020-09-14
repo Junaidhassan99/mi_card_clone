@@ -18,24 +18,27 @@ class MiCardScreen extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Container(
-          width: double.infinity,
-          height: 40,
+        Card(
+          // width: double.infinity,
+          // height: 40,
           color: Colors.white,
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: icon,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: Text(
-                  text, //
-                  style: TextStyle(fontSize: 18),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: icon,
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Text(
+                    text, //
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
+              ],
+            ),
           ),
         )
       ],
